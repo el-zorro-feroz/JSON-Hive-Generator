@@ -1,7 +1,10 @@
 library json_hive_generator;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:hive/hive.dart';
+
+part 'package:json_hive_generator/src/hive_importer.dart';
+part 'package:json_hive_generator/src/hive_exporter.dart';
