@@ -1,5 +1,5 @@
 name: json_hive_generator
-description: Add-on import/export feature for hive to json
+description: Adds additional functionality to your project that will allow you to import your Hive Boxes into a JSON file and also export them back to Boxes.
 homepage: https://github.com/pocket-red-fox
 repository: https://github.com/pocket-red-fox/JSON-Hive-Generator
 version: 1.0.1
