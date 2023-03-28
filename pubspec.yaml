@@ -2,7 +2,7 @@ name: json_hive_generator
 description: Add-on import/export feature for hive to json
 homepage: https://github.com/pocket-red-fox
 repository: https://github.com/pocket-red-fox/JSON-Hive-Generator
-version: 1.0.0
+version: 1.0.1
 
 environment:
   sdk: '>=2.19.2 <3.0.0'

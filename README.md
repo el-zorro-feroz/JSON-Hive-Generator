@@ -12,9 +12,9 @@ Use this plugin in your Flutter app to:
 ```dart
   final eventBox = await Hive.openBox<Event>('events');
 
-  /// This is an example of how to export all [Event]`s in Hive to JSON file
+  /// Export all [Event]`s in Hive to JSON file
   await HiveExporter<Event>(eventBox, exportFilePath).export();
 
-  /// This is an example of how to import all [Event]`s from JSON file to Hive
+  /// Import all [Event]`s from JSON file to Hive
   await HiveImporter<Event>(eventBox, importFilePath).import();
 ```
