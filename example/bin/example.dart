@@ -1,7 +1,7 @@
 /// Title: JSON-Hive-Generator
 /// Author: Savin, V
 /// Date: 2023
-/// Code version: 1.0.1
+/// Code version: 1.0.2
 /// Type: source code
 /// Web address: https://github.com/pocket-red-fox
 /// License: MIT License
@@ -26,24 +26,23 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import 'package:flutter/widgets.dart';
-import 'package:json_hive_generator/example/entities/event.dart';
-import 'package:json_hive_generator/json_hive_generator.dart';
-import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart' as path_provider;
+import 'package:json_hive_generator/json_hive_generator.dart';
+import 'package:example/entities/event.dart';
 
-const String hiveDBPath = 'db';
+/// Path to store [Hive] database files
+const String hiveDBPath = 'example_db_path';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
+  /// Init [Hive] Database
   Hive.init(hiveDBPath);
   Hive.registerAdapter(EventAdapter());
 
+  /// Open [Box] for storing [Event]`s
   final eventBox = await Hive.openBox<Event>('events');
 
-  final String appDocDir =
-      (await path_provider.getApplicationDocumentsDirectory()).path;
+  final String appDocDir = (await path_provider.getApplicationDocumentsDirectory()).path;
   final String exportFilePath = '$appDocDir/events.json';
 
   /// This is an example of how to export all [Event]`s in Hive to JSON file
@@ -51,7 +50,4 @@ void main() async {
 
   /// This is an example of how to import all [Event]`s from JSON file to Hive
   await HiveImporter<Event>(eventBox, exportFilePath).import();
-
-  await eventBox.close();
-  await Hive.close();
 }

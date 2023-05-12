@@ -1,7 +1,7 @@
 /// Title: JSON-Hive-Generator
 /// Author: Savin, V
 /// Date: 2023
-/// Code version: 1.0.1
+/// Code version: 1.0.2
 /// Type: source code
 /// Web address: https://github.com/pocket-red-fox
 /// License: MIT License

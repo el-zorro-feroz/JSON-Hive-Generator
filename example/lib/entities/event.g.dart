@@ -1,7 +1,7 @@
 /// Title: JSON-Hive-Generator
 /// Author: Savin, V
 /// Date: 2023
-/// Code version: 1.0.1
+/// Code version: 1.0.2
 /// Type: source code
 /// Web address: https://github.com/pocket-red-fox
 /// License: MIT License
@@ -61,9 +61,5 @@ class EventAdapter extends TypeAdapter<Event> {
   int get hashCode => typeId.hashCode;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is EventAdapter &&
-          runtimeType == other.runtimeType &&
-          typeId == other.typeId;
+  bool operator ==(Object other) => identical(this, other) || other is EventAdapter && runtimeType == other.runtimeType && typeId == other.typeId;
 }

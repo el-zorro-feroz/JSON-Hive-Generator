@@ -1,7 +1,13 @@
 ## 1.0.0
 
-Release
+- Release this package
 
 ## 1.0.1
 
-Documentation and License Update
+- Add LICENSE file
+- Update code documentation
+
+## 1.0.2
+
+- Add an example folder
+- Remove unnecessary entities
