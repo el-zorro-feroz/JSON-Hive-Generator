@@ -2,8 +2,6 @@ Multi-platform library to add JSON import/export features for Hive
 
 ## Features
 
-Use this plugin in your Flutter app to:
-
 - Export Hive objects to JSON file
 - Import JSON file as Hive objects
 
@@ -18,3 +16,6 @@ Use this plugin in your Flutter app to:
   /// Import all [Event]`s from JSON file to Hive
   await HiveImporter<Event>(eventBox, importFilePath).import();
 ```
+## Learn more
+
+- [API Documentation](https://pocket-red-fox.github.io/JSON-Hive-Generator/)
